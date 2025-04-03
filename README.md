@@ -8,3 +8,4 @@ Hello
 
 [Link to yes.py](yes.py)
 ![image failed](images/IMG_0012.jpeg)
+[Page 2](page2.md)
