@@ -7,3 +7,4 @@ This is the github pages site for me. I am testing how to make a personal websit
 Hello 
 
 [Link to yes.py](yes.py)
+![image failed](images/IMG_0012.jpeg)
