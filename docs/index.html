@@ -1,15 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <p>I am very cool</p>
-    <img src="images/IMG_0012.jpeg" width=200 height=200>
-    <script src="index.js" defer></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Douglas | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Douglas Lin</h1>
+      <nav id="navbar">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="nav-toggle">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am an incoming student to the University of Washington for Computer Science</p>
+      <p>My experiences and interests lie in a combination of computational and synthetic biology.
+        My ultimate goal in life is to find cures to incurable diseases and revolutionize what 
+        humans can do with biology. 
+      </p>
+      <p>My top experiences include: </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-search">
+        <input type="text" id="project-search-input" placeholder="Search projects..." aria-label="Search projects">
+        <button id="project-search-button">Search</button>
+        <button id="project-search-clear">Clear</button>
+      </div>
+      <div class="carousel-container">
+        <button class="arrow left-arrow">&#9664;</button>
+        <div class="project-list">
+          <div class="project" data-keywords="molecular dynamics, simulation, proteins, OpenMM, ambertools">
+            <h3>Melting proteins in Molecular Dynamics</h3>
+            <p>I created a script to simulate proteins at different temperatures. It includes one extreme melting reaction at 500K.
+              This project was mostly done for fun so I could learn how to use OpenMM and ambertools (FOSS tools for Molecular Dynamcis)
+            </p>
+            <a href="https://github.com/dglgit/melting-md">View on GitHub</a>
+            <img src="https://via.placeholder.com/300x200?text=Melting+Proteins+Image" alt="Placeholder image for Melting Proteins project">
+          </div>
+          <div class="project" data-keywords="membrane, simulation, phospholipid, ethanol, OpenMM, ambertools">
+            <h3>Membrane simulation</h3>
+            <p>I created a script to simulate a phosopholipid membrane in ethanol to see if I could see it tear apart.
+              This project was mostly done for fun so I could learn how to use OpenMM and ambertools (FOSS tools for Molecular Dynamcis)
+            </p>
+            <a href="https://github.com/dglgit/membrane-testing">View on GitHub</a>
+            <img src="https://via.placeholder.com/300x200?text=Membrane+Simulation+Image" alt="Placeholder image for Membrane Simulation project">
+          </div>
+          <div class="project" data-keywords="screen saver, simulation, Stockholm Junior Water Prize, python">
+            <h3>Screen Saver Simulator</h3>
+            <p>I was inspired to make this at the Stockholm Junior Water Prize in 2022 when 5 of us spent 30 minutes watching a channel logo bounce on a screen, waiting for it to hit the corner. I forgot to upload it back then and the laptop I coded it on broke, so I have recreated it here.</p>
+            <a href="https://github.com/dglgit/screen-saver-sim">View on GitHub</a>
+            <img src="https://via.placeholder.com/300x200?text=Screen+Saver+Image" alt="Placeholder image for Screen Saver Simulator project">
+          </div>
+          <div class="project" data-keywords="web compute, framework, distributed computing, collatz conjecture, prime numbers">
+            <h3>Web Compute Framework</h3>
+            <p>The purpose of this project is to create a framework and a web client that can allow anyone to visit this site and help compute the next collatz conjecture number or help find the next prime number or any other task that can be distributed among multiple machines</p>
+            <a href="https://github.com/dglgit/webCompute_sf">View on GitHub</a>
+            <img src="https://via.placeholder.com/300x200?text=Web+Compute+Image" alt="Placeholder image for Web Compute Framework project">
+          </div>
+          <!-- Add more projects here -->
+        </div>
+        <button class="arrow right-arrow">&#9654;</button>
+      </div>
+      <div id="no-projects-message" style="display: none; text-align: center; margin-top: 20px;">
+        No projects found matching your search.
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:dlin26@uw.edu">dlin26@uw.edu</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/douglas-lin-6096802ab/">https://www.linkedin.com/in/douglas-lin-6096802ab/</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Douglas Lin</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
+

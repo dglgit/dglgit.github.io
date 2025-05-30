@@ -1,0 +1,143 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+#nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 800px; /* Match section max-width */
+  margin: 0 auto;
+  padding: 0 50px; /* Add horizontal padding to make space for arrows */
+}
+
+.project-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding-bottom: 1rem; /* Add some padding for scrollbar visibility */
+  /* Hide scrollbar for a cleaner look */
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scroll-snap-type: x mandatory; /* Enable mandatory horizontal scroll snapping */
+  align-items: flex-start; /* Align items to the start */
+}
+
+.project-list::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+.project {
+  flex: 0 0 100%; /* Make each project take up the full width of the container */
+  width: 100%; /* Ensure width is 100% */
+  max-width: none; /* Remove max-width constraint */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  scroll-snap-align: start; /* Snap project to the start of the scroll container */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 30px 10px; /* Increase vertical padding further for taller buttons */
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem; /* Keep arrow icons larger */
+}
+
+.left-arrow {
+  left: 0; /* Position at the left edge of the container's padding */
+}
+
+.right-arrow {
+  right: 0; /* Position at the right edge of the container's padding */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Responsive nav */
+@media (max-width: 600px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    right: 1rem;
+    top: 60px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  #nav-toggle {
+    display: inline;
+  }
+}
+
