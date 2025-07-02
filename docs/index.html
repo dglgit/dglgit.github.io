@@ -38,6 +38,8 @@
         <input type="text" id="project-search-input" placeholder="Search projects..." aria-label="Search projects">
         <button id="project-search-button">Search</button>
         <button id="project-search-clear">Clear</button>
+        <!-- Layout Toggle Button -->
+        <button id="layout-toggle-button">Show Stacked</button>
       </div>
       <div class="carousel-container">
         <button class="arrow left-arrow">&#9664;</button>
@@ -48,6 +50,7 @@
               This project was mostly done for fun so I could learn how to use OpenMM and ambertools (FOSS tools for Molecular Dynamcis)
             </p>
             <a href="https://github.com/dglgit/melting-md">View on GitHub</a>
+            <br>
             <img src="https://via.placeholder.com/300x200?text=Melting+Proteins+Image" alt="Placeholder image for Melting Proteins project">
           </div>
           <div class="project" data-keywords="membrane, simulation, phospholipid, ethanol, OpenMM, ambertools">
@@ -56,24 +59,33 @@
               This project was mostly done for fun so I could learn how to use OpenMM and ambertools (FOSS tools for Molecular Dynamcis)
             </p>
             <a href="https://github.com/dglgit/membrane-testing">View on GitHub</a>
+            <br>
             <img src="https://via.placeholder.com/300x200?text=Membrane+Simulation+Image" alt="Placeholder image for Membrane Simulation project">
           </div>
           <div class="project" data-keywords="screen saver, simulation, Stockholm Junior Water Prize, python">
             <h3>Screen Saver Simulator</h3>
             <p>I was inspired to make this at the Stockholm Junior Water Prize in 2022 when 5 of us spent 30 minutes watching a channel logo bounce on a screen, waiting for it to hit the corner. I forgot to upload it back then and the laptop I coded it on broke, so I have recreated it here.</p>
             <a href="https://github.com/dglgit/screen-saver-sim">View on GitHub</a>
+            <br>
             <img src="https://via.placeholder.com/300x200?text=Screen+Saver+Image" alt="Placeholder image for Screen Saver Simulator project">
           </div>
           <div class="project" data-keywords="web compute, framework, distributed computing, collatz conjecture, prime numbers">
             <h3>Web Compute Framework</h3>
             <p>The purpose of this project is to create a framework and a web client that can allow anyone to visit this site and help compute the next collatz conjecture number or help find the next prime number or any other task that can be distributed among multiple machines</p>
             <a href="https://github.com/dglgit/webCompute_sf">View on GitHub</a>
+            <br>
             <img src="https://via.placeholder.com/300x200?text=Web+Compute+Image" alt="Placeholder image for Web Compute Framework project">
           </div>
           <!-- Add more projects here -->
         </div>
         <button class="arrow right-arrow">&#9654;</button>
       </div>
+
+      <!-- Project Counter -->
+      <div class="project-counter" style="text-align: center; margin-top: 10px;">
+          <span id="remaining-projects-counter"></span>
+      </div>
+
       <div id="no-projects-message" style="display: none; text-align: center; margin-top: 20px;">
         No projects found matching your search.
       </div>

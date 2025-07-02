@@ -119,6 +119,55 @@ footer {
   margin-top: 2rem;
 }
 
+/* Layout Toggle Button Styling */
+#layout-toggle-button {
+  margin-left: 10px; /* Add some space between search clear and toggle button */
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#layout-toggle-button:hover {
+  background-color: #0056b3;
+}
+
+/* Stacked layout for projects */
+.project-list.stacked {
+  flex-direction: column;
+  overflow-x: visible; /* Allow content to overflow vertically */
+  scroll-behavior: auto; /* Disable smooth scroll in stacked view */
+  scroll-snap-type: none; /* Disable scroll snapping in stacked view */
+  padding-bottom: 0; /* Remove bottom padding in stacked view */
+}
+
+.project-list.stacked .project {
+  flex: 0 0 auto; /* Allow projects to take up necessary height */
+  width: 100%; /* Projects take full width */
+  margin-bottom: 1rem; /* Add space between stacked projects */
+}
+
+/* Hide arrows in stacked layout */
+.carousel-container.stacked .arrow {
+    display: none;
+}
+
+/* Adjust carousel container padding in stacked layout if needed */
+.carousel-container.stacked {
+    padding: 0; /* Remove horizontal padding in stacked view */
+}
+
+/* Project Counter Styling */
+.project-counter {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
 /* Responsive nav */
 @media (max-width: 600px) {
   nav ul {
