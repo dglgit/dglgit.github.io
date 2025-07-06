@@ -10,4 +10,4 @@
 
 # Ignore the Gemfiles too
 *Gemfile*
-
+*.DS_Store

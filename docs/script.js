@@ -38,58 +38,26 @@ rightArrow.addEventListener('click', () => {
   }
 });
 
-// Project search functionality
-const projectSearchInput = document.getElementById('project-search-input');
-const projectSearchClear = document.getElementById('project-search-clear');
-projectSearchClear.addEventListener('click',() => {
-  projectSearchInput.value = '';
-  // Trigger the input event to re-filter and show all projects
-  projectSearchInput.dispatchEvent(new Event('input'));
-});
+// Project dropdown functionality
+const projectDropdown = document.getElementById('project-dropdown');
 
-projectSearchInput.addEventListener('input', (event) => {
-  const searchQuery = event.target.value.toLowerCase();
-  let visibleCount = 0;
-  const noProjectsMessage = document.getElementById('no-projects-message'); // Select message by ID
+projectDropdown.addEventListener('change', () => {
+  const selectedProject = projectDropdown.value;
+
 
   projects.forEach(project => {
-    const keywords = project.getAttribute('data-keywords') || '';
-    const title = project.querySelector('h3').textContent.toLowerCase();
-    const description = project.querySelector('p').textContent.toLowerCase();
+    const title = project.querySelector('h3').textContent;
 
-    // Check if search query matches keywords, title, or description
-    if (keywords.includes(searchQuery) || title.includes(searchQuery) || description.includes(searchQuery)) {
-      project.style.display = 'block'; // Show the project
-      visibleCount++;
-    } else {
-      project.style.display = 'none'; // Hide the project
+    if (title === selectedProject) {
+      // Scroll to the selected project
+      projectList.scrollLeft = project.offsetLeft - projectList.offsetLeft;
     }
   });
 
-  // Show or hide the "No projects found" message based on visible projects
-  if (noProjectsMessage) {
-    if (visibleCount === 0) {
-      noProjectsMessage.style.display = 'block';
-      // Optionally hide arrows if no projects are visible after search
-      leftArrow.style.display = 'none';
-      rightArrow.style.display = 'none';
-    } else {
-      noProjectsMessage.style.display = 'none';
-      // Show arrows again if projects become visible
-      leftArrow.style.display = ''; // Reset to default display
-      rightArrow.style.display = ''; // Reset to default display
-    }
-  }
 
-  // Re-calculate projectWidth in case of dynamic changes (though less likely with current CSS)
-  // If the layout could change significantly, recalculating here might be needed.
-  // For this specific case, with projects taking 100% width, clientWidth is likely the carousel-container width minus padding.
-  // Let's stick to the initial calculation for simplicity, assuming layout is stable after load.
-
-  // Update project counter after search
+  // Update project counter after dropdown change
   updateProjectCounter();
 });
-
 // Get the counter element
 const remainingProjectsCounter = document.getElementById('remaining-projects-counter');
 
