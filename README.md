@@ -1,11 +1,5 @@
 # dglgit.github.io
 
-This is the github pages site for me. I am testing how to make a personal website. 
+This is the github pages site for me.
+https://dglgit.github.io 
 
-# Big 
-## Smaller 
-Hello 
-
-[Link to yes.py](yes.py)
-![image failed](images/IMG_0012.jpeg)
-[Page 2](page2.md)
